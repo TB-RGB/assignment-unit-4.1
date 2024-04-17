@@ -37,19 +37,27 @@ console.log('The multiplication of 7, 8, & 9:', multiplyThree(7,8,9));
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    return true;
+  } else {
+    return false;
   }
-  return;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
+console.log('Is -100 a positive number?', isPositive(-100));
+console.log('Is 100 a positive number?', isPositive(100));
+
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-
+  const last = array.findLast((lastValue) => lastValue === array[array.length - 1]);
+  return last;
 }
+
+console.log('Last value of the [1,2,3,24] array:', getLast([1,2,3,24]));
+console.log('Last value of the [] array:', getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
