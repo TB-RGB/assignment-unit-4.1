@@ -98,17 +98,27 @@ console.log(`Is 'a' the first letter of 'Alphabet'?`, isFirstLetter('a','Alphabe
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
+  for (let i = 0; i < array.length; i++){
+    sum += array[i];
+  }
   // TODO: return the sum
+  return sum;
 }
-
+console.log('Sum of the array of [10,10,20]', sumAll([10,10,20]));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
-
+function allPositive(array) {
+  let newArray = [];
+  for (let v of array){
+    if (v > 0){
+      newArray.push(v);
+    }
+  }
+  return newArray;
 }
-
+console.log('A new array of all positive numbers in the array [1,-10,2,-100]', allPositive([1,-10,2,-100]));
+console.log('A new array of all positive numbers in the array [-20,-30,-40]', allPositive([-20,-30,-40]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
