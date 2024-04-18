@@ -82,8 +82,16 @@ console.log('Is the value 37 in the array [10,20,30,37]', find(37,[10,20,30,37])
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  for ( let c of string){
+    if (letter === string[0]){
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
+console.log(`Is 'A' the first letter of 'Alphabet'?`, isFirstLetter('A','Alphabet'));
+console.log(`Is 'a' the first letter of 'Alphabet'?`, isFirstLetter('a','Alphabet'));
 
 
 // 9. Function to return the sum of all numbers in an array
